@@ -1,0 +1,1359 @@
+
+<defaults>
+/ fontstyle = ("Arial", 3.5%)
+/ screencolor = (255, 255, 255)
+/ minimumversion = "3.0.0.0"
+/ inputdevice = keyboard
+</defaults>
+
+
+<instruct>
+/ nextkey = (" ")
+/ nextlabel = "Press Spacebar When Finished"
+/ finishlabel =  "Press HERE Only When Finished"
+/ inputdevice = mouse
+/ windowsize = (98%, 98%)
+</instruct>
+
+<block blank>
+</block>
+
+********************
+Welcome
+***********************
+
+<item welcome>
+/ 1 = "Welcome! Press the spacebar to continue."
+ </item>
+
+<text welcome>
+/ items = welcome
+/ fontstyle = ("Arial", 4.59%, true, false, false, false, 5, 0)
+ / numitems = 1 
+</text>
+
+<trial welcome>
+/ correctresponse = (" ")
+/ inputdevice = keyboard
+/ frames = [1=welcome]
+/ responsemode = correct 
+/ validresponse = (" ") 
+</trial>
+
+<block welcome>
+/ trials = [1 = welcome]
+</block>
+
+********************
+Done With IAT
+***********************
+
+<item IATComplete>
+/ 1 = "You are now finished with the categorization task.  You will learn more about the task at the end of the study.
+
+Press the Space Bar to start the next portion of the study."
+ </item>
+
+<text IATComplete>
+/ items = IATComplete
+/ fontstyle = ("Arial", 4.59%, true, false, false, false, 5, 0)
+ / numitems = 1 
+/size=(90%,50%)
+</text>
+
+<trial IATComplete>
+/ correctresponse = (" ")
+/ inputdevice = keyboard
+/ frames = [1=IATComplete]
+/ responsemode = correct 
+/ validresponse = (" ") 
+</trial>
+
+<block IATComplete>
+/ trials = [1 = IATComplete]
+</block>
+
+************************************
+Consent
+***********************************
+<block Consent>
+/ trials = [1=Consent]
+</block>
+
+<item Consent>
+/1= "
+INFORMED CONSENT AGREEMENT
+
+Please read this consent agreement carefully before you decide to participate in the study.
+
+Purpose of the research study: The purpose of the study is to explore the ways in which we make judgments or evaluate other people.
+
+What you will do in the study: In this study, you will be asked to play the role of an executive or manager who has to make decisions about applicants for a group or club. After making these decisions, you will be asked to complete a questionnaire.
+
+Time required: You will be asked to complete a study that lasts up to 30 minutes.
+
+Risks: There are no anticipated risks in this study.
+
+Benefits: There are no direct benefits to you for participating in this research study.  The study may help us understand how people evaluate others.
+
+Confidentiality: The information that you provide us with will be kept anonymous.  We ask that you not discuss your study session with people outside of this lab in order to preserve your pirvacy. In addition, your indentity will remain confidential. Any data from the study made available to others will be anonymous.
+
+Voluntary participation: Your participation in the study is completely voluntary. 
+
+Right to withdraw from the study: You have the right to withdraw from the study at any time without penalty.  If you decide to withdraw from the study, your data will be deleted.
+
+How to withdraw from the study: If you want to withdraw from the study at any time, just tell the experimenter.  You will still be debriefed if you withdraw from the study.  There is no penalty for withdrawing. You will still receive class participation credit for the study. If you would like to withdraw after your materials have been submited, please contact Jordan Axt (jra3ee@virginia.edu). His information is at the bottom of this consent form.
+
+Payment:  If you are participating for class credit, you will receive .5 class participation credits for the 30 minutes you participated.  Studies shorter than 30 minutes will be paired with a separate study for a total duration of 30 minutes, for which you will receive ½ a class participation credit. 
+
+If you have questions about the study, contact:
+Jordan Axt
+Department of Psychology, PO Box 400400
+University of Virginia
+Charlottesville, VA 22903 
+Telephone: (434) 243-7787
+jra3ee@virginia.edu
+
+
+If you have questions about your rights in the study, contact:
+Tonya R. Moon, Ph.D., 
+Chair, Institutional Review Board for the Social and Behavioral Sciences
+University of Virginia, P.O. Box 800392
+Charlottesville, VA 22908-0392
+Telephone:  (434) 924-5999 
+Email: irbsbshelp@virginia.edu
+Website: www.virginia.edu/vpr/irb
+
+Press the SPACE BAR to indicate that you are 18 or older and that you want to participate."  
+
+</item>
+
+<text Consent>
+/ items = Consent
+/ hjustify = left
+/ fontstyle = ("Arial", 1.43%, false, false, false, false, 5, 0)
+/ position = (50%, 50%)
+/ size = (90%, 90%)
+</text>
+
+<trial Consent>
+/ stimulusframes = [1=Consent]
+/ validresponse = (" ")
+/ inputdevice = keyboard
+/ correctresponse = (" ")
+</trial>
+
+
+********************************
+Images
+*******************************
+<picture AcceptButton>
+/items = ("Accept.jpg")
+/ position = (85%,80%)
+/size = (16%,16%)
+</picture>
+
+<picture RejectButton>
+/items = ("Reject.jpg")
+/ position = (15%,80%)
+/size = (16%,16%)
+</picture>
+
+<picture accept_pics_white1>
+/ items = accept_pics_white1
+/select=noreplace
+/size=(60%,60%)
+</picture>
+
+<picture accept_pics_black1>
+/ items = accept_pics_black1
+/select=noreplace
+/size=(60%,60%)
+</picture>
+
+<picture reject_pics_white1>
+/ items = reject_pics_white1
+/select=noreplace
+/size=(60%,60%)
+</picture>
+
+<picture reject_pics_black1>
+/ items = reject_pics_black1
+/select=noreplace
+/size=(60%,60%)
+</picture>
+
+<picture white_pics_accept1>
+/ items = white_pics_accept1
+/ select = current(accept_pics_white1)
+/position=(50%,37.5%)
+</picture>
+
+<picture black_pics_accept1>
+/ items = black_pics_accept1
+/ select = current(accept_pics_black1)
+/position=(50%,37.5%)
+</picture>
+
+<picture white_pics_reject1>
+/ items = white_pics_reject1
+/ select = current(reject_pics_white1)
+/position=(50%,37.5%)
+</picture>
+
+<picture black_pics_reject1>
+/ items = black_pics_reject1
+/ select = current(reject_pics_black1)
+/position=(50%,37.5%)
+</picture>
+
+<item accept_pics_white1>
+</item>
+
+<item accept_pics_black1>
+</item>
+
+<item reject_pics_white1>
+</item>
+
+<item reject_pics_black1>
+</item>
+
+<item white_pics_accept1>
+</item>
+
+<item black_pics_accept1>
+</item>
+
+<item white_pics_reject1>
+</item>
+
+<item black_pics_reject1>
+</item>
+
+<counter setup_accept_pics>
+/ items = ("App14_1Template.jpg", "App14_2Template.jpg", "App14_3Template.jpg", "App14_4Template.jpg",
+"App14_5Template.jpg", "App14_6Template.jpg", "App14_7Template.jpg", "App14_8Template.jpg",
+"App14_9Template.jpg", "App14_10Template.jpg","App14_11Template.jpg", "App14_12Template.jpg",
+"App14_13Template.jpg", "App14_14Template.jpg", "App14_15Template.jpg", "App14_16Template.jpg",
+"App14_17Template.jpg", "App14_18Template.jpg", "App14_19Template.jpg", "App14_20Template.jpg",
+"App14_21Template.jpg", "App14_22Template.jpg",
+"App14_23Template.jpg", "App14_24Template.jpg", "App14_25Template.jpg", "App14_26Template.jpg",
+"App14_27Template.jpg", "App14_28Template.jpg", "App14_29Template.jpg", "App14_30Template.jpg")
+/ select = noreplace
+/ selectionrate = trial
+</counter>
+
+<counter setup_reject_pics>
+/ items = ("App13_1Template.jpg", "App13_2Template.jpg", "App13_3Template.jpg", "App13_4Template.jpg",
+"App13_5Template.jpg", "App13_6Template.jpg", "App13_7Template.jpg", "App13_8Template.jpg",
+"App13_9Template.jpg", "App13_10Template.jpg","App13_11Template.jpg", "App13_12Template.jpg",
+"App13_13Template.jpg", "App13_14Template.jpg", "App13_15Template.jpg", "App13_16Template.jpg",
+"App13_17Template.jpg", "App13_18Template.jpg", "App13_19Template.jpg", "App13_20Template.jpg",
+"App13_21Template.jpg", "App13_22Template.jpg",
+"App13_23Template.jpg", "App13_24Template.jpg", "App13_25Template.jpg", "App13_26Template.jpg",
+"App13_27Template.jpg", "App13_28Template.jpg", "App13_29Template.jpg", "App13_30Template.jpg")
+/ select = noreplace
+/ selectionrate = trial
+</counter>
+
+<counter setup_white_pics>
+/ items = ("W1S.bmp", "W2S.bmp", "W3S.bmp", "W4S.bmp",
+"W5S.bmp", "W6S.bmp", "W7S.bmp", "W8S.bmp", "W9S.bmp", "W10S.bmp",
+"W11S.bmp","W12S.bmp", "W13S.bmp", "W14S.bmp", "W15S.bmp", "W16S.bmp",
+"W17S.bmp","W18S.bmp","W19S.bmp","W20S.bmp","W21S.bmp","W22S.bmp","W23S.bmp","W24S.bmp",
+"W25S.bmp","W26S.bmp","W27S.bmp","W28S.bmp","W29S.bmp","W30S.bmp")
+/ select = noreplace
+/ selectionrate = trial
+</counter>
+
+<counter setup_black_pics>
+/ items = ("B1S.bmp", "B2S.bmp", "B3S.bmp", "B4S.bmp",
+"B5S.bmp", "B6S.bmp", "B7S.bmp", "B8S.bmp", "B9S.bmp", "B10S.bmp",
+"B11S.bmp","B12S.bmp", "B13S.bmp", "B14S.bmp", "B15S.bmp","B16S.bmp",
+"B17S.bmp","B18S.bmp","B19S.bmp","B20S.bmp","B21S.bmp","B22S.bmp","B23S.bmp","B24S.bmp",
+"B25S.bmp","B26S.bmp","B27S.bmp","B28S.bmp","B29S.bmp","B30S.bmp")
+/ select = noreplace
+/ selectionrate = trial
+</counter>
+
+<trial setup_pairingsaw>
+/ ontrialbegin = [item.accept_pics_white1.item=counter.setup_accept_pics.selectedvalue]
+/ ontrialbegin = [item.white_pics_accept1.item=counter.setup_white_pics.selectedvalue]
+/ trialduration = 0
+/ recorddata = false
+</trial>
+
+<trial setup_pairingsab>
+/ ontrialbegin = [item.accept_pics_black1.item=counter.setup_accept_pics.selectedvalue]
+/ ontrialbegin = [item.black_pics_accept1.item=counter.setup_black_pics.selectedvalue]
+/ trialduration = 0
+/ recorddata = false
+</trial>
+
+<trial setup_pairingsrw>
+/ ontrialbegin = [item.reject_pics_white1.item=counter.setup_reject_pics.selectedvalue]
+/ ontrialbegin = [item.white_pics_reject1.item=counter.setup_white_pics.selectedvalue]
+/ trialduration = 0
+/ recorddata = false
+</trial>
+
+<trial setup_pairingsrb>
+/ ontrialbegin = [item.reject_pics_black1.item=counter.setup_reject_pics.selectedvalue]
+/ ontrialbegin = [item.black_pics_reject1.item=counter.setup_black_pics.selectedvalue]
+/ trialduration = 0
+/ recorddata = false
+</trial>
+
+<trial orientaw>
+/ stimulusframes = [1=accept_pics_white1,white_pics_accept1]
+/timeout=1000
+/posttrialpause=200
+</trial>
+
+<trial orientab>
+/ stimulusframes = [1=accept_pics_black1,black_pics_accept1]
+/timeout=1000
+/posttrialpause=200
+</trial>
+
+<trial orientrw>
+/ stimulusframes = [1=reject_pics_white1,white_pics_reject1]
+/timeout=1000
+/posttrialpause=200
+</trial>
+
+<trial orientrb>
+/ stimulusframes = [1=reject_pics_black1,black_pics_reject1]
+/timeout=1000
+/posttrialpause=200
+</trial>
+
+<trial testaw>
+/ stimulusframes = [1=accept_pics_white1,AcceptButton,RejectButton,white_pics_accept1]
+/ correctresponse = (AcceptButton)
+/ validresponse = (AcceptButton,RejectButton)
+/inputdevice = mouse
+/posttrialpause=200
+</trial>
+
+<trial testab>
+/ stimulusframes = [1=accept_pics_black1,AcceptButton,RejectButton,black_pics_accept1]
+/ correctresponse = (AcceptButton)
+/ validresponse = (AcceptButton,RejectButton)
+/inputdevice = mouse
+/posttrialpause=200
+</trial>
+
+<trial testrw>
+/ stimulusframes = [1=reject_pics_white1,AcceptButton,RejectButton,white_pics_reject1]
+/ correctresponse = (RejectButton)
+/ validresponse = (AcceptButton,RejectButton)
+/inputdevice = mouse
+/posttrialpause=200
+</trial>
+
+<trial testrb>
+/ stimulusframes = [1=reject_pics_black1,AcceptButton,RejectButton,black_pics_reject1]
+/ correctresponse = (RejectButton)
+/ validresponse = (AcceptButton,RejectButton)
+/inputdevice = mouse
+/posttrialpause=200
+</trial>
+
+<block pairings>
+/ trials = [1-60=noreplace(setup_pairingsaw,setup_pairingsab,setup_pairingsrw,setup_pairingsrb)]
+</block>
+
+<block orient>
+/ trials = [1=Instruct1;2=Instruct2;3-62=noreplace(orientaw,orientrw,orientab,orientrb);63=Instruct3]
+</block>
+
+<block test>
+/ trials = [1-60=noreplace(testaw,testrw,testab,testrb)]
+</block>
+
+**********************************************
+Instructions and Block Formatting
+**********************************************
+
+<item Instruct1>
+/1= "INSTRUCTIONS: In this task, you will play the role of selection committee member for an academic honor society.  You will see a variety of applicants and their information, and it is up to you to decide who to accept into the honor society and who to reject.  It is your job to try and select the most qualified candidates.
+
+More specifically, each applicant will have four pieces of information that are available to you:
+
+1) Science GPA: GPA (out of 4.0) in science classes (biology, chemistry, etc.)
+2) Humanities GPA: GPA (out of 4.0) in humanities classes (English, foreign languages, etc.)
+3) Letters of Recommendation: The overall quality (poor, fair, good or excellent) of the letters of recommendation that accompanied the application.
+4) Interview Score: The interview score (out of 100) that the applicant received during the first round of the application process, which just ended.
+
+Importantly, this academic honor society is looking for very well-rounded applicants, so it is crucial that you weigh and consider each of the four qualifications equally when you make your decision about who to accept and who to reject into the next round of the application process.
+
+For this round of the application process, you need to reject around half of the applicants, so try to keep an estimate of what percentage of the applicants you have rejected as you complete the task.
+
+PRESS THE SPACE BAR TO CONTINUE. "  
+</item>
+
+<text Instruct1>
+/ items = Instruct1
+/ fontstyle = ("Arial", 2.73%, false, false, false, false, 5, 0)
+/ position = (50%, 50%)
+/ size = (80%, 70%)
+/ hjustify = left
+</text>
+
+<trial Instruct1>
+/ stimulusframes = [1=Instruct1]
+/ validresponse = (" ")
+/ inputdevice = keyboard
+/ correctresponse = (" ")
+</trial>
+
+<item Instruct2>
+/1= "
+On the next few screens, you will be shown each applicant and their credentials.  This is just to get you familiar with the applicant pool.  For this round, there are 60 total applicants.  
+
+After you see each applicant briefly, you will then be presented with applicants one at a time.  There will be a button on the screen for 'Accept' and another for 'Reject'.
+
+There are no right or wrong answers, but please try your best to select the most qualified applicants.
+
+PRESS THE SPACE BAR TO BEGIN SEEING THE APPLICANTS. "  
+</item>
+
+<text Instruct2>
+/ items = Instruct2
+/ fontstyle = ("Arial", 2.73%, false, false, false, false, 5, 0)
+/ position = (50%, 50%)
+/ size = (80%, 70%)
+/ hjustify = left
+</text>
+
+<trial Instruct2>
+/ stimulusframes = [1=Instruct2]
+/ validresponse = (" ")
+/ inputdevice = keyboard
+/ correctresponse = (" ")
+</trial>
+
+<item Instruct3>
+/1= "
+On the next screen, you will begin seeing each of the 60 applicants, one at a time.  There will be one button for 'Accept' and another for 'Reject'.
+
+Again, you should be accepting approximately half of the applicants to reach the next round.
+
+
+
+
+PRESS THE SPACE BAR TO BEGIN SEEING THE APPLICANTS. "  
+</item>
+
+<text Instruct3>
+/ items = Instruct3
+/ fontstyle = ("Arial", 2.73%, false, false, false, false, 5, 0)
+/ position = (50%, 50%)
+/ size = (80%, 70%)
+/ hjustify = left
+</text>
+
+<trial Instruct3>
+/ stimulusframes = [1=Instruct3]
+/ validresponse = (" ")
+/ inputdevice = keyboard
+/ correctresponse = (" ")
+</trial>
+
+
+*************************************************
+
+
+<item endstudy1>
+/1= "Thank you for again for completing this study! The general purpose of this research is to investigate how people may use social information even when they are asked to make non-social judgments.
+
+In this study, you were asked to make a series of accept or reject decisions on a number of applicants, and were told to accept half of them.  Within the pool of applicants, we varied the qualifications of the applicants to create two groups.  Based on their overall qualifications, there was one set of applicants that should have been accepted and another set that should have been rejected.  Furthermore, within each set of applicants that should have been accepted or rejected, there were people from different social groups, such as different races, genders, or ages.  
+  
+We are interested in whether these different social groups altered the way you decided who should have been accepted and who should have been rejected.  For example, people may be more accurate at deciding who should or should not be accepted when presented with members of their own group compared to members of another group.  Or, people may be too lenient or forgiving when deciding on members of their own group, and too tough on members from other groups.
+
+We also asked you to complete a survey about your attitudes towards White and Black people, as well as the IAT. We are interested in how these opinions and IAT performance may relate to performance on the hiring task.
+
+The results from this study will help us to better understand how people use social information to make evaluations or decisions about others, even when they might not want to use that social information.  
+
+Thank you again for your participation in this study.  If you have further questions about the study, please contact Jordan Axt at jra3ee@virginia.edu or 434-243-7787.  In addition, if you have any concerns about any aspect of the study, you may contact Tonya Moon, Ph.D., Chair, Institutional Review Board for the Social and Behavioral Sciences, One Morton Drive, Suite 500, University of Virginia, P.O. Box 800392, Charlottesville, VA 22908-0392. Telephone: (434) 924-5999.  
+
+If you are interested in learning more about this topic, you may find the readings below as a good place to start:
+
+Caruso, E. M., Rahnev, D. A., & Banaji, M. R. (2009). Using conjoint analysis to detect discrimination: Revealing covert preferences from overt choices. Social Cognition, 27(1), 128-137.
+
+Dovidio, J. F., & Gaertner, S. L. (2000). Aversive racism and selection decisions: 1989 and 1999. Psychological Science, 11(4), 315-319.
+
+YOU ARE NOW DONE WITH THE STUDY. PLEASE FIND YOUR EXPERIMENTER."
+</item>
+
+<text endstudy1>
+/ items = endstudy1
+/ fontstyle = ("Arial", 1.96%, false, false, false, false, 5, 0)
+/ position = (50%, 25%)
+/ size = (80%, 30%)
+/ hjustify = left
+</text>
+
+<trial endstudy1>
+/ stimulusframes = [1=endstudy1]
+/ validresponse = (" ")
+/ inputdevice = keyboard
+/ showmousecursor = true
+</trial>
+
+<block endstudy1>
+/ trials = [1=endstudy1]
+</block>
+
+***** 
+Explicit Items
+********
+
+********************************
+SYMBOLIC RACISM 2000 SCALE
+********************************
+
+<likert sr20001>
+/ stimulusframes = [1= sr20001]
+/ numpoints = 4
+/ anchors= [1="Strongly agree"; 2="Somewhat agree"; 3="Somewhat disagree"; 4="Strongly disagree"]
+/ anchorwidth= 18%
+/ fontstyle = ("Arial", 1.96%, false, false, false, false, 5, 0) 
+/position = (50%, 65%)
+/inputdevice = mouse
+</likert>
+
+<likert sr20002>
+/ stimulusframes = [1= sr20002]
+/ numpoints = 4
+/ anchors= [1="Strongly agree"; 2="Somewhat agree"; 3="Somewhat disagree"; 4="Strongly disagree"]
+/ anchorwidth= 18%
+/ fontstyle = ("Arial", 1.96%, false, false, false, false, 5, 0) 
+/position = (50%, 65%)
+/inputdevice = mouse
+</likert>
+
+<likert sr20003>
+/ stimulusframes = [1= sr20003]
+/ numpoints = 3
+/ anchors= [1="Trying to push very much too fast"; 2="Going too slowly"; 3="Moving at about the right speed"] 
+/ anchorwidth= 26%
+/ fontstyle = ("Arial", 1.96%, false, false, false, false, 5, 0) 
+/position = (50%, 65%)
+/inputdevice = mouse
+</likert>
+
+<likert sr20004>
+/ stimulusframes = [1= sr20004]
+/ numpoints = 4
+/ anchors= [1="All of it"; 2="Most of it"; 3="Some"; 4="Not much at all"] 
+/ anchorwidth= 18%
+/ fontstyle = ("Arial", 1.96%, false, false, false, false, 5, 0) 
+/inputdevice = mouse
+/position = (50%, 65%)
+</likert>
+
+<likert sr20005>
+/ stimulusframes = [1= sr20005]
+/ numpoints = 4
+/ anchors= [1="A lot"; 2="Some"; 3="Just a little"; 4="None at all"] 
+/ anchorwidth= 18%
+/ fontstyle = ("Arial", 1.96%, false, false, false, false, 5, 0) 
+/position = (50%, 65%)
+/inputdevice = mouse
+</likert>
+
+<likert sr20006>
+/ stimulusframes = [1= sr20006]
+/ numpoints = 4
+/ anchors= [1="Strongly agree"; 2="Somewhat agree"; 3="Somewhat disagree"; 4="Strongly disagree"]
+/ anchorwidth= 18%
+/ fontstyle = ("Arial", 1.96%, false, false, false, false, 5, 0) 
+/position = (50%, 65%)
+/inputdevice = mouse
+</likert>
+
+<likert sr20007>
+/ stimulusframes = [1= sr20007]
+/ numpoints = 4
+/ anchors= [1="Strongly agree"; 2="Somewhat agree"; 3="Somewhat disagree"; 4="Strongly disagree"]
+/ anchorwidth= 18%
+/ fontstyle = ("Arial", 1.96%, false, false, false, false, 5, 0) 
+/position = (50%, 65%)
+/inputdevice = mouse
+</likert>
+
+<likert sr20008>
+/ stimulusframes = [1= sr20008]
+/ numpoints = 4
+/ anchors= [1="Strongly agree"; 2="Somewhat agree"; 3="Somewhat disagree"; 4="Strongly disagree"]
+/ anchorwidth= 18%
+/ fontstyle = ("Arial", 1.96%, false, false, false, false, 5, 0) 
+/position = (50%, 65%)
+/inputdevice = mouse
+</likert>
+
+<likert exppref>
+/ stimulusframes = [1= exppref]
+/ numpoints = 7
+/ anchors= [1="Strongly prefer White to Black people"; 2="Moderately prefer White to Black people"; 3="Slightly prefer White to Black people"; 
+4="Like Black and White people equally"; 5="Slightly prefer Black to White people"; 6="Moderately prefer Black to White people"; 7="Strongly prefer Black to White people"]
+/ anchorwidth= 14%
+/ fontstyle = ("Arial", 0.86%, false, false, false, false, 5, 77) 
+/position = (50%, 65%)
+/inputdevice = mouse
+</likert>
+
+<text sr20001> 
+/ items = ("It's really a matter of some people not trying hard enough; if Black people would only try harder they could be just as well off as White people.")
+/ color = (0, 0, 0)
+/ fontstyle = ("Arial", 2.25%, false, false, false, false, 5, 0)
+/ numitems = 1 
+/size=(90%,25%)
+</text>
+
+<text sr20002> 
+/ items = ("Irish, Italian, Jewish and many other minorities overcame prejudice and worked their way up.  Black people should do the same.")
+/ color = (0, 0, 0)
+/ fontstyle = ("Arial", 2.25%, false, false, false, false, 5, 0)
+/ numitems = 1 
+/size=(90%,25%)
+</text>
+
+<text sr20003> 
+/ items = ("Some say that Black leaders have been trying to push too fast.  Others feel that they haven't pushed fast enough.  What do you think?")
+/ color = (0, 0, 0)
+/ fontstyle = ("Arial", 2.25%, false, false, false, false, 5, 0)
+/ numitems = 1 
+/size=(90%,25%)
+</text>
+
+<text sr20004> 
+/ items = ("How much of the racial tension that exists today do you think Black people are responsible for creating?")
+/ color = (0, 0, 0)
+/ fontstyle = ("Arial", 2.25%, false, false, false, false, 5, 0)
+/ numitems = 1 
+/size=(90%,25%)
+</text>
+
+<text sr20005> 
+/ items = ("How much discrimination against Black people do you feel there is today, limiting their chances to get ahead?")
+/ color = (0, 0, 0)
+/ fontstyle = ("Arial", 2.25%, false, false, false, false, 5, 0)
+/ numitems = 1 
+/size=(90%,25%)
+</text>
+
+<text sr20006> 
+/ items = ("Generations of slavery and discrimination have created conditions that make it difficult for Black people to work their way out of the lower class.")
+/ color = (0, 0, 0)
+/ fontstyle = ("Arial", 2.25%, false, false, false, false, 5, 0)
+/ numitems = 1 
+/size=(90%,25%)
+</text>
+
+<text sr20007> 
+/ items = ("Over the past few years, Black people have gotten less than they deserve.")
+/ color = (0, 0, 0)
+/ fontstyle = ("Arial", 2.25%, false, false, false, false, 5, 0)
+/ numitems = 1 
+/size=(90%,25%)
+</text>
+
+<text sr20008> 
+/ items = ("Over the past few years, Black people have gotten more economically than they deserve.")
+/ color = (0, 0, 0)
+/ fontstyle = ("Arial", 2.25%, false, false, false, false, 5, 0)
+/ numitems = 1 
+/size=(90%,25%)
+</text>
+
+<text exppref> 
+/ items = ("Which statement best describes your feelings towards White and Black people?")
+/ color = (0, 0, 0)
+/ fontstyle = ("Arial", 2.25%, false, false, false, false, 5, 0)
+/ numitems = 1 
+/size=(90%,25%)
+</text>
+
+<item sr2000instruct>
+/1= "
+
+Now you will be asked to respond to some questionnaires.  Please read each of the following statements carefully and select the response option that you think is most reflective of your own opinions.
+
+
+Please respond honestly. Your answers will remain confidential.
+
+
+Press the spacebar to begin."
+
+
+</item>
+
+
+<text sr2000instruct>
+/ items = sr2000instruct
+/ fontstyle = ("Arial", 2.73%, false, false, false, false, 5, 0)
+/ position = (50%, 50%)
+/ size = (80%, 70%)
+</text>
+
+<trial sr2000instruct>
+/ stimulusframes = [1=sr2000instruct]
+/ validresponse = (" ")
+/ correctresponse = (" ")
+</trial>
+
+
+<block explicit>
+/ trials = [1= sr2000instruct; 2-9= noreplace(sr20001,sr20002,sr20003,sr20004,sr20005,sr20006,sr20007,sr20008); 10=exppref]
+</block>
+
+
+<survey demographics>
+/ pages=[1=demog1; 2=demog2; 3=demog3]
+/ itemspacing = 2%
+/ screencolor = (255, 255, 255)
+/ txcolor = (0, 0, 0)
+/ fontstyle = ("Arial", 1.66%, false, false, false, false, 5, 0)
+/ navigationbuttonsize = (10%, 3%)
+/ showpagenumbers = false
+/ showbackbutton = false
+/ showquestionnumbers = false
+</survey>
+
+<surveypage demog1>
+/ caption = "It is important for us to know a little more information about who you are."
+/ subcaption = "This information will remain completely confidential."
+/ questions = [1=age; 2=gender; 3=race; 4=year]
+/ finishlabel = "Click to continue"
+</surveypage>
+
+<surveypage demog2>
+/ questions = [1=bornus; 2=otherborn; 3=longliveUS; 4=speakeng; 5=firstlang]
+/ finishlabel = "Click to continue"
+</surveypage>
+
+<surveypage demog3>
+/ questions = [1=parenteduc; 2=houseincome]
+/ finishlabel = "Click to continue"
+</surveypage>
+
+<textbox age>
+/ caption = "Please enter your age"
+/ mask = positiveinteger
+/ range = (7, 110)
+/ required = false
+</textbox>
+
+<dropdown gender>
+/ caption = "Please indicate your gender"
+/ options = ("Female", "Male")
+/ required = false
+</dropdown>
+
+<radiobuttons race>
+/ caption = "Race/Ethnicity"
+/ options = 
+("African-American, Black, African, Caribbean", 
+ "Asian-American, Asian, Pacific Islander",
+ "European-American, Anglo, Caucasian",
+ "Hispanic-American, Latino(a), Chicano(a)",
+ "Native-American, American Indian",
+ "Bi-racial, Multi-racial")
+/ other = "Other (please specify)"
+/ required = true
+</radiobuttons>
+
+<radiobuttons year>
+/ caption = "What grade are you?"
+/ options = ("First year", "Second year", "Third year", "Fourth year")
+/ other = "Other (please specify)"
+/ required = false
+</radiobuttons>
+
+<dropdown bornus>
+/ caption = "Were you born in the United States?"
+/ options = ("Yes", "No")
+/ required = false
+</dropdown>
+
+<textbox otherborn>
+/ caption = "If you were not born in the United States, where were you born?"
+/ required = false
+</textbox>
+
+<textbox longliveUS>
+/ caption = "How long have you been living in the United States?"
+/ required = false
+</textbox>
+
+<dropdown speakeng>
+/ caption = "Is English your first language?"
+/ options = ("Yes", "No")
+/ required = true
+</dropdown>
+
+<textbox firstlang>
+/ caption = "If not, what is your first language?"
+/ required = false
+</textbox>
+
+<radiobuttons houseincome>
+/ caption = "What is your family household income? If you do not know, please guess."
+/ options = 
+("Under $35,000",
+"$35,000-$49,999",
+"$50,000-$64,999",
+"$65,000-$79,999",
+"$80,000-$94,999", 
+"$95,000-$109,999",
+"$110,000-$124,999",
+"$125,000-$139,999", 
+"$140,000-$154,999",
+"$155,000-$169,999",
+"$170,000-$184,999",
+"$185,000-$199,999",
+"$200,000-$214,999",
+"$215,000-$229,999", 
+"$230,000-$249,999",
+"more than $250,000")
+/ required = false
+</radiobuttons>
+
+<radiobuttons parenteduc>
+/ caption = "What is the highest level of education completed by one or both of your parents?"
+/ options = 
+("Less than a high school diploma", 
+"High school diploma",
+ "Some college or vocational training",
+ "2-year college degree (e.g., Associate's degree)",
+ "4-year college degree (e.g., B.S., B.A.)",
+ "Post-college degree (e.g., M.A., M.S., J.D., Ph.D., M.D.)")
+/ required = false
+</radiobuttons>
+
+/ trialdata = [age, gender, race, year, bornus, otherborn, longliveUS, speakeng, firstlang, parenteduc, houseincome, expectgpa]
+
+
+
+*****************************************************
+
+<expt>
+/ blocks = [1=pairings;2=welcome;3=consent;4=orient;5=test;
+6=block1; 7=attributepractice; 8=block3; 9=block4; 10=block5; 11=block6; 12=block7; 13=block8; 14=block9; 15=IATComplete; 16=explicit;17=demographics;18=summary;19=endstudy1]
+/subjects =(50,15,59,20,19,76,40,37,31,54,55,58,39,62,88,8,73,84,63,78,52,27,33,11,60,61,79,3,81,48,38,22,12,77,90,25,6,44,66,14,17,71,56,57,36 of 90)
+/groupassignment = random
+</expt>
+
+<expt>
+/ blocks = [1=pairings;2=welcome;3=consent;4=orient;5=test;
+6=explicit; 7=block1; 8=attributepractice; 9=block3; 10=block4; 11=block5; 12=block6; 13=block7; 14=block8; 15=block9; 16=IATComplete; 17=demographics;18=summary;19=endstudy1]
+/subjects =(4,64,65,18,89,72,29,74,68,87,86,82,42,70,28,30,16,34,46,51,2,13,43,32,5,24,41,75,21,7,69,53,80,26,85,23,35,83	,1,9,47,67,45,49,10 of 90)
+/groupassignment = random
+</expt>
+
+<variables>
+/ group = (1 of 2) (block1=targetcompatiblepractice; block3=compatibletest1; block4=compatibletestinstructions; block5=compatibletest2; block6=targetincompatiblepractice; block7=incompatibletest1; block8=incompatibletestinstructions; block9=incompatibletest2)
+/ group = (2 of 2) (block1=targetincompatiblepractice; block3=incompatibletest1; block4=incompatibletestinstructions; block5=incompatibletest2; block6=targetcompatiblepractice; block7=compatibletest1; block8=compatibletestinstructions; block9=compatibletest2)
+</variables>
+
+***********************************************************************
+Data Columns
+***********************************************************************
+
+<data>
+/ columns = [date, time, subject, blockcode, blocknum, trialcode, trialnum, response, correct, latency, stimulusnumber, stimulusitem, stimulusitem,stimulusitem,stimulusitem, expressions.da, expressions.db, expressions.d ]
+</data>
+
+********
+IAT Stuff
+********
+
+
+<item attributeAlabel>
+/1 = "Good"
+</item>
+
+<item attributeA>
+/1 = "Marvelous"
+/2 = "Superb"
+/3 = "Pleasure"
+/4 = "Beautiful"
+/5 = "Joyful"
+/6 = "Glorious"
+/7 = "Lovely"
+/8 = "Wonderful"
+</item>
+
+<item attributeBlabel>
+/1 = "Bad"
+</item>
+
+<item attributeB>
+/1 = "Tragic"
+/2 = "Horrible"
+/3 = "Agony"
+/4 = "Painful"
+/5 = "Terrible"
+/6 = "Awful"
+/7 = "Humiliate"
+/8 = "Nasty"
+</item>
+
+<item targetAlabel>
+/1 = "White American"
+</item>
+
+<item targetA>
+/1 = "wf2_nc.jpg"
+/2 = "wf3_nc.jpg"
+/3 = "wf6_nc.jpg"
+/4 = "wm1_nc.jpg"
+/5 = "wm4_nc.jpg"
+/6 = "wm6_nc.jpg"
+</item>
+
+<item targetBlabel>
+/1 = "Black American"
+</item>
+
+<item targetB>
+/1 = "bf14_nc.jpg"
+/2 = "bf23_nc.jpg"
+/3 = "bf56_nc.jpg"
+/4 = "bm14_nc.jpg"
+/5 = "bm23_nc.jpg"
+/6 = "bm56_nc.jpg"
+</item>
+
+***********************************************************************
+To change the categories, you need only change the stimulus items and 
+labels immediately above this line. All commands below relate to the 
+IAT procedure, and need only be changed if you wish to modify the 
+generic IAT procedure.
+***********************************************************************
+
+
+***********************************************************************
+Performance summary
+***********************************************************************
+
+<trial summary>
+/ stimulustimes = [0=summary]
+/ validresponse = (" ")
+/ recorddata = false
+/ ontrialbegin = [values.magnitude = "little to no"]
+/ ontrialbegin = [if( abs(expressions.d) > 0.15 ) values.magnitude = "a slight"]
+/ ontrialbegin = [if( abs(expressions.d) > 0.35 ) values.magnitude = "a moderate"]
+/ ontrialbegin = [if( abs(expressions.d) >= 0.65 ) values.magnitude = "a strong"]
+/ ontrialbegin = [if(expressions.d >= 0.0) expressions.preferred = item.targetALabel.1]
+/ ontrialbegin = [if(expressions.d < 0.0) expressions.preferred = item.targetBLabel.1]
+/ ontrialbegin = [if(expressions.d < 0.0) expressions.notpreferred= item.targetALabel.1]
+/ ontrialbegin = [if(expressions.d >= 0.0) expressions.notpreferred= item.targetBLabel.1]
+</trial>
+
+<text summary>
+/ items = ("Thank you for completing the study!	              
+
+The word categorization task you completed is called the Implicit Association Test (IAT).  The task assesses associations between concepts by measuring how quickly a person can categorize, for example, GOOD words with White faces compared to GOOD words with Black faces. The idea is that the more strongly associated the two concepts are in memory, the more quickly you will be able to categorize words into those paired categories. Your score is reported as an implicit preference for White people compared to Black people if you were faster at categorizing Good words with White faces compared to Black faces.  The test often reveals associations that are different than one's conscious beliefs.  For example, even people who have no conscious preference between Black and White may still have implicit associations that White is better than Black.  
+
+Your results are reported below:
+
+Your IAT score (D) was <% expressions.d %>, which suggests <% values.magnitude %> automatic preference for <% expressions.preferred %> compared to <% expressions.notpreferred %>.~n~n~nPress the spacebar to learn more about this study.") 
+/ size = (90%, 90%)
+/ hjustify = left
+ </text>
+
+***********************************************************************
+Task instruction stimuli
+***********************************************************************
+
+<trial instructions>
+/ stimulustimes = [1=instructions, spacebar]
+/ correctresponse = (" ")
+/ errormessage = false
+/ recorddata = false
+</trial>
+
+<text instructions>
+/ items = instructions
+/ hjustify = left
+/ size = (90%, 60%)
+/ position = (50%, 85%)
+/ valign = bottom
+/ select = sequence
+/ resetinterval = 20
+/txcolor = (255,255,255)
+/ txbgcolor = (0,0,0)
+</text>
+
+<item instructions>
+/ 1 = "Put your middle or index fingers on the E and I keys of your keyboard. Pictures or words representing the categories at the top will appear one-by-one in the middle of the screen. When the item belongs to a category on the left, press the E key; when the item belongs to a category on the right, press the I key. Items belong to only one category. If you make an error, an X will appear - fix the error by hitting the other key.
+
+This is a timed sorting task. GO AS FAST AS YOU CAN while making as few mistakes as possible. Going too slow or making too many errors will result in an uninterpretable score. This task will take about 5 minutes to complete."
+/ 2 = "See above, the categories have changed. the items for sorting have changed as well. The rules, however, are the same.
+
+When the item belongs to a category on the left, press the E key; when the item belongs to a category on the right, press the I key. Items belong to only one category. An X appears after an error - fix the error by hitting the other key. GO AS FAST AS YOU CAN."
+/ 3 = "See above, the four categories you saw separately now appear together. Remember, each item belongs to only one group. For example, if the categories flower and good appeared on the separate sides above - pictures or words meaning flower would go in the flower category, not the good category.
+
+The green and white labels and items may help to identify the appropriate category. Use the E and I keys to categorize items into four groups left and right, and correct errors by hitting the other key."
+
+/ 4 = "Sort the same four categories again. Remember to go as fast as you can while making as few mistakes as possible.
+
+The green and white labels and items may help to identify the appropriate category. Use the E and I keys to categorize items into the four groups left and right, and correct errors by hitting the other key."
+/ 5 = "Notice above, there are only two cateogries and they have switched positions. The concept that was previously on the left is now on the right, and the concept that was on the right is now on the left. Practice this new configuration.
+
+Use the E and I keys to catgorize items left and right, and correct errors by hitting the other key."
+/ 6 = "See above, the four categories now appear together in a new configuration. Remember, each item belongs to only one group.
+
+The green and white labels and items may help to identify the appropriate category. Use the E and I keys to categorize items into the four groups left and right, and correct errors by hitting the other key."
+/ 7 = "Sort the same four categories again. Remember to go as fast as you can while making as few mistakes as possible.
+
+The green and white labels and items may help to identify the appropriate category. Use the E and I keys to categorize items into the four groups left and right, and correct errors by hitting the other key."
+</item>
+
+<text spacebar>
+/ items = ("Press the SPACE BAR to begin.")
+/ position = (50%, 95%)
+/ valign = bottom
+/txcolor = (255,255,255)
+/ txbgcolor = (0,0,0)
+</text>
+
+<text attributeA>
+/ items = attributeA
+/ fontstyle = ("Arial", 5%)
+/ txcolor = (0, 255, 0)
+/ txbgcolor = (0,0,0)
+</text>
+
+<text attributeB>
+/ items = attributeB
+/ fontstyle = ("Arial", 5%)
+/ txcolor = (0, 255, 0)
+/ txbgcolor = (0,0,0)
+</text>
+
+<picture targetB>
+/ items = targetB
+/ size = (20%, 20%)
+</picture>
+
+<picture targetA>
+/ items = targetA
+/ size = (20%, 20%)
+</picture>
+
+<text error>
+/ position = (50%, 75%)
+/ items = ("X")
+/ color = (255, 0, 0)
+/txbgcolor = (0,0,0)
+/ fontstyle = ("Arial", 10%, true)
+</text>
+
+<text attributeAleft>
+/ items = attributeAlabel
+/ valign = top
+/ halign = left
+/ position = (5%, 5%)
+/ txcolor = (0, 255, 0)
+/txbgcolor = (0,0,0)
+/ fontstyle = ("Arial", 5%)
+</text>
+
+<text attributeBright>
+/ items = attributeBlabel
+/ valign = top
+/ halign = right
+/ position = (95%, 5%)
+/ txcolor = (0, 255, 0)
+/txbgcolor = (0,0,0)
+/ fontstyle = ("Arial", 5%)
+</text>
+
+<text attributeAleftmixed>
+/ items = attributeAlabel
+/ valign = top
+/ halign = left
+/ position = (5%, 19%)
+/ txcolor = (0, 255, 0)
+/txbgcolor = (0,0,0)
+/ fontstyle = ("Arial", 5%)
+</text>
+
+<text attributeBrightmixed>
+/ items = attributeBlabel
+/ valign = top
+/ halign = right
+/ position = (95%, 19%)
+/ txcolor = (0, 255, 0)
+/txbgcolor = (0,0,0)
+/ fontstyle = ("Arial", 5%)
+</text>
+
+<text targetBleft>
+/ items = targetBlabel
+/ valign = top
+/ halign = left	
+/ position = (5%, 5%)
+/ fontstyle = ("Arial", 5%)
+/txcolor = (255,255,255)
+/txbgcolor = (0,0,0)
+</text>
+
+<text targetBright>
+/ items = targetBlabel
+/ valign = top
+/ halign = right
+/ position = (95%, 5%)
+/ fontstyle = ("Arial", 5%)
+/txcolor = (255,255,255)
+/txbgcolor = (0,0,0)
+</text>
+
+<text targetAleft>
+/ items = targetAlabel
+/ valign = top
+/ halign = left
+/ position = (5%, 5%)
+/ fontstyle = ("Arial", 5%)
+/txcolor = (255,255,255)
+/txbgcolor = (0,0,0)
+</text>
+
+<text targetAright>
+/ items = targetAlabel
+/ valign = top
+/ halign = right
+/ position = (95%, 5%)
+/ fontstyle = ("Arial", 5%)
+/txcolor = (255,255,255)
+/txbgcolor = (0,0,0)
+</text>
+
+<text orleft>
+/ items = ("or")
+/ valign = top
+/ halign = left
+/ position = (5%, 12%)
+/ fontstyle = ("Arial", 5%)
+/txcolor = (255,255,255)
+/txbgcolor = (0,0,0)
+</text>
+
+<text orright>
+/ items = ("or")
+/ valign = top
+/ halign = right
+/ position = (95%, 12%)
+/ fontstyle = ("Arial", 5%)
+/txcolor = (255,255,255)
+/txbgcolor = (0,0,0)
+</text>
+
+***********************************************************************
+Trials
+***********************************************************************
+
+<trial attributeA>
+/ validresponse = ("E", "I")
+/ correctresponse = ("E")
+/ stimulusframes = [1 = attributeA]
+/ posttrialpause = 250
+</trial>
+
+<trial attributeB>
+/ validresponse = ("E", "I")
+/ correctresponse = ("I")
+/ stimulusframes = [1 = attributeB]
+/ posttrialpause = 250
+</trial>
+
+
+<trial targetBleft>
+/ validresponse = ("E", "I")
+/ correctresponse = ("E")
+/ stimulusframes = [1 = targetB]
+/ posttrialpause = 250
+</trial>
+
+<trial targetBright>
+/ validresponse = ("E", "I")
+/ correctresponse = ("I")
+/ stimulusframes = [1 = targetB]
+/ posttrialpause = 250
+</trial>
+
+<trial targetAleft>
+/ validresponse = ("E", "I")
+/ correctresponse = ("E")
+/ stimulusframes = [1 = targetA]
+/ posttrialpause = 250
+</trial>
+
+<trial targetAright>
+/ validresponse = ("E", "I")
+/ correctresponse = ("I")
+/ stimulusframes = [1 = targetA]
+/ posttrialpause = 250
+</trial>
+
+***********************************************************************
+Blocks
+***********************************************************************
+
+<block attributepractice>
+/ bgstim = (attributeAleft, attributeBright)
+/ screencolor = (0,0,0)
+/ trials = [1=instructions;2-21 = random(attributeA, attributeB)]
+/ errormessage = true(error,200)
+/ responsemode = correct
+</block>
+
+<block targetcompatiblepractice>
+/ bgstim = (targetAleft, targetBright)
+/ screencolor = (0,0,0)
+/ trials = [1=instructions;2-21 = random(targetAleft, targetBright)]
+/ errormessage = true(error,200)
+/ responsemode = correct
+</block>
+
+<block targetincompatiblepractice>
+/ bgstim = (targetAright, targetBleft)
+/ screencolor = (0,0,0)
+/ trials = [1=instructions;2-21 = random(targetAright, targetBleft)]
+/ errormessage = true(error,200)
+/ responsemode = correct
+</block>
+
+<block targetcompatiblepracticeswitch>
+/ bgstim = (targetAleft, targetBright)
+/ screencolor = (0,0,0)
+/ trials = [1=instructions;2-41 = random(targetAleft, targetBright)]
+/ errormessage = true(error,200)
+/ responsemode = correct
+</block>
+
+<block targetincompatiblepracticeswitch>
+/ bgstim = (targetAright, targetBleft)
+/ screencolor = (0,0,0)
+/ trials = [1=instructions;2-41 = random(targetAright, targetBleft)]
+/ errormessage = true(error,200)
+/ responsemode = correct
+</block>
+
+<block compatibletest1>
+/ bgstim = (targetAleft, orleft, attributeAleftmixed, targetBright, orright, attributeBrightmixed)
+/ trials = [1=instructions;
+  3,5,7,9,11,13,15,17,19,21= random(targetAleft, targetBright);
+  2,4,6,8,10,12,14,16,18,20 = random(attributeA, attributeB)]
+/ errormessage = true(error,200)
+/ responsemode = correct
+/ screencolor = (0,0,0)
+/ ontrialend = [if(block.compatibletest1.latency  <= 10000 && block.compatibletest1.currenttrialnumber != 1 ) values.sum1a =  values.sum1a + block.compatibletest1.latency]
+/ ontrialend = [if(block.compatibletest1.latency  <= 10000 && block.compatibletest1.currenttrialnumber != 1 ) values.n1a =  values.n1a + 1]
+/ ontrialend = [if(block.compatibletest1.latency  <= 10000 && block.compatibletest1.currenttrialnumber != 1 ) values.ss1a =  values.ss1a + (block.compatibletest1.latency * block.compatibletest1.latency)]
+</block>
+
+<block compatibletest2>
+/ bgstim = (targetAleft, orleft, attributeAleftmixed, targetBright, orright, attributeBrightmixed)
+/ trials = [
+  2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40 = random(targetAleft, targetBright);
+  1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39 = random(attributeA, attributeB)]
+/ errormessage = true(error,200)
+/ responsemode = correct
+/ screencolor = (0,0,0)
+/ ontrialend = [if(block.compatibletest2.latency  <= 10000) values.sum1b =  values.sum1b + block.compatibletest2.latency]
+/ ontrialend = [if(block.compatibletest2.latency  <= 10000) values.n1b =  values.n1b + 1]
+/ ontrialend = [if(block.compatibletest2.latency  <= 10000) values.ss1b =  values.ss1b + (block.compatibletest2.latency * block.compatibletest2.latency)]
+</block>
+
+<block incompatibletest1>
+/ bgstim = (targetBleft, orleft, attributeAleftmixed, targetAright, orright, attributeBrightmixed)
+/ trials = [1=instructions;
+  3,5,7,9,11,13,15,17,19,21 = random(targetBleft, targetAright);
+  2,4,6,8,10,12,14,16,18,20 = random(attributeA, attributeB)]
+/ errormessage = true(error,200)
+/ responsemode = correct
+/ screencolor = (0,0,0)
+/ ontrialend = [if(block.incompatibletest1.latency  <= 10000 && block.incompatibletest1.currenttrialnumber != 1) values.sum2a =  values.sum2a + block.incompatibletest1.latency]
+/ ontrialend = [if(block.incompatibletest1.latency  <= 10000 && block.incompatibletest1.currenttrialnumber != 1 ) values.n2a =  values.n2a + 1]
+/ ontrialend = [if(block.incompatibletest1.latency  <= 10000 && block.incompatibletest1.currenttrialnumber != 1 ) values.ss2a =  values.ss2a + (block.incompatibletest1.latency * block.incompatibletest1.latency)]
+</block>
+
+<block incompatibletest2>
+/ bgstim = (targetBleft, orleft, attributeAleftmixed, targetAright, orright, attributeBrightmixed)
+/ trials = [
+  2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40 = random(targetBleft, targetAright);
+  1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39 = random(attributeA, attributeB)]
+/ errormessage = true(error,200)
+/ responsemode = correct
+/ ontrialend = [if(block.incompatibletest2.latency  <= 10000) values.sum2b =  values.sum2b + block.incompatibletest2.latency]
+/ ontrialend = [if(block.incompatibletest2.latency  <= 10000) values.n2b =  values.n2b + 1]
+/ ontrialend = [if(block.incompatibletest2.latency  <= 10000) values.ss2b =  values.ss2b + (block.incompatibletest2.latency * block.incompatibletest2.latency)]
+/ screencolor = (0,0,0)
+</block>
+
+<block compatibletestinstructions>
+/ bgstim = (targetAleft, orleft, attributeAleftmixed, targetBright, orright, attributeBrightmixed)
+/ trials = [1=instructions]
+/ screencolor = (0,0,0)
+/ recorddata = false
+</block>
+
+<block incompatibletestinstructions>
+/ bgstim = (targetBleft, orleft, attributeAleftmixed, targetAright, orright, attributeBrightmixed)
+/ trials = [1=instructions]
+/ recorddata = false
+/ screencolor = (0,0,0)
+</block>
+
+<block summary>
+/ trials = [1=summary]
+/ recorddata = false
+</block>
+
+
+***********************************************************************
+Scoring
+***********************************************************************
+<values>
+/ sum1a = 0
+/ sum2a = 0
+/ sum1b = 0
+/ sum2b = 0
+/ n1a = 0
+/ n2a = 0
+/ n1b = 0
+/ n2b = 0
+/ ss1a = 0
+/ ss2a = 0
+/ ss1b = 0
+/ ss2b = 0
+/ magnitude = "unknown"
+</values>
+
+* 1 is compatible, 2 is incompatible
+* a is first block, b is second block
+
+<expressions>
+/ m1a = values.sum1a / values.n1a
+/ m2a = values.sum2a / values.n2a
+/ m1b = values.sum1b / values.n1b
+/ m2b = values.sum2b / values.n2b
+/ sd1a = sqrt((values.ss1a - (values.n1a * (expressions.m1a * expressions.m1a))) / (values.n1a - 1))
+/ sd2a = sqrt((values.ss2a - (values.n2a * (expressions.m2a * expressions.m2a))) / (values.n2a - 1))
+/ sd1b = sqrt((values.ss1b - (values.n1b * (expressions.m1b * expressions.m1b))) / (values.n1b - 1))
+/ sd2b = sqrt((values.ss2b - (values.n2b * (expressions.m2b * expressions.m2b))) / (values.n2b - 1))
+/ sda = sqrt((((values.n1a - 1) * (expressions.sd1a * expressions.sd1a) + (values.n2a - 1) * (expressions.sd2a * expressions.sd2a)) + ((values.n1a + values.n2a) * ((expressions.m1a - expressions.m2a) * (expressions.m1a - expressions.m2a)) / 4) ) / (values.n1a + values.n2a - 1) )
+/ sdb = sqrt((((values.n1b - 1) * (expressions.sd1b * expressions.sd1b) + (values.n2b - 1) * (expressions.sd2b * expressions.sd2b)) + ((values.n1b + values.n2b) * ((expressions.m1b - expressions.m2b) * (expressions.m1b - expressions.m2b)) / 4) ) / (values.n1b + values.n2b - 1) )
+/ da = (m2a - m1a) / expressions.sda
+/ db = (m2b - m1b) / expressions.sdb
+/ d = (expressions.da + expressions.db) / 2
+/ preferred = "unknown"
+/ notpreferred = "unknown"
+</expressions>
